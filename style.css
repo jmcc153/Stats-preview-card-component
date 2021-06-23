@@ -1,0 +1,118 @@
+.container-text {
+  margin: 60px;
+  color: white;
+}
+
+b {
+  color: #aa5cdb;
+}
+
+body {
+  font-size: 15px;
+  background-color: #090b1a;
+  font-family: 'Inter';
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #1b1938;
+  margin-top: 200px;
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 60px 60px;
+      grid-template-rows: 60px 60px;
+  -ms-grid-columns: 120px 120px 120px;
+      grid-template-columns: 120px 120px 120px;
+}
+
+.container-img {
+  width: 500px;
+  height: auto;
+  background-image: linear-gradient(190deg, rgba(148, 13, 233, 0.5), rgba(100, 12, 155, 0.6)), url(./images/image-header-desktop.jpg);
+}
+
+@media (max-width: 375px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (375px)[3];
+        grid-template-rows: repeat(3, 375px);
+    -ms-grid-columns: 340px;
+        grid-template-columns: 340px;
+        grid-template-areas: "header" "content" "footer";
+    border-radius: 24px;
+    /*margin: auto;*/
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .container-img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+    width: 340px;
+    border-radius: 24px 24px 0 0;
+    background-image: linear-gradient(190deg, rgba(148, 13, 233, 0.5), rgba(100, 12, 155, 0.6)), url(./images/image-header-mobile.jpg);
+    background-size: cover;
+    background-repeat: round;
+  }
+  .container-text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: content;
+    text-align: center;
+  }
+  .container-text footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: footer;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: (40px)[6];
+        grid-template-rows: repeat(6, 40px);
+        grid-template-areas: "case1" "case2" "case3" "case4" "case5" "case6";
+  }
+  .container-text footer .case1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: case1;
+  }
+  .container-text footer .case4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: case2;
+  }
+  .container-text footer .case2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: case3;
+  }
+  .container-text footer .case5 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: case4;
+  }
+  .container-text footer .case3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: case5;
+  }
+  .container-text footer .case6 {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: case6;
+  }
+}
+/*# sourceMappingURL=style.css.map */
